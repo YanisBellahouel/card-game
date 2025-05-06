@@ -1,7 +1,13 @@
 import Field from "./Field.jsx";
 
-function OpponentField() {
-	return <Field isOpponent={true} />;
+function OpponentField({ deckCards = [], graveyardCards = [] }) {
+	return (
+		<Field
+			isOpponent={true}
+			deckCards={deckCards}
+			graveyardCards={graveyardCards}
+		/>
+	);
 }
 
 export default OpponentField;
