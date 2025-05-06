@@ -1,120 +1,224 @@
 .field {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background-color: #8b8b8b;
-	width: 1000px;
-	height: 300px;
-	border: black 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin: 1rem auto;
+    padding: 1rem;
+    position: relative;
 }
 
-.fieldspell-box{
-	border: white 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-right: 10px;
+.fieldspell-box {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    width: 60px;
+    height: 110px;
+    background-color: var(--field-bg);
+    box-shadow: inset 0 0 8px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
 }
 
-.monster-and-spell-box{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border: blue 2px solid;
-	width: 520px;
-	height: 220px;
-	margin: 10px;
+.fieldspell-box:hover {
+    box-shadow: inset 0 0 12px rgba(52, 152, 219, 0.5);
+    border-color: #7df9ff;
 }
 
-.monster-box{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	border: red 2px solid;
-	width: 500px;
-	height: 100px;
-	margin-bottom: 5px;
+.monster-and-spell-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 70%;
+    height: 90%;
+    background-color: rgba(44, 62, 80, 0.5);
+    padding: 0.5rem;
 }
 
-.monster-box-card{
-	border: rgb(0, 0, 0) 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-right: 20px;
-	margin-left: 20px;
+.monster-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgba(231, 76, 60, 0.4);
+    border-radius: 8px;
+    width: 100%;
+    height: 45%;
+    background-color: var(--field-bg);
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
 }
 
-.spell-box{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	border: green 2px solid;
-	width: 500px;
-	height: 100px;
-	margin-top: 5px;
+.monster-box:hover {
+    border-color: rgba(231, 76, 60, 0.8);
 }
 
-.spell-box-card{
-	border: rgb(0, 0, 0) 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-right: 20px;
-	margin-left: 20px;
+.monster-box-card {
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    width: 16%;
+    height: 90%;
+    transition: all 0.3s ease;
+    background-color: rgba(30, 39, 46, 0.6);
 }
 
-.graveyard-and-deck-box{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border: purple 2px solid;
-	width: 60px;
-	height: 220px;
-	margin-right: 10px;
-	position: relative;
+.monster-box-card:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(30, 39, 46, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
-.graveyard-box{
-	border: pink 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-bottom: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
+.spell-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgba(46, 204, 113, 0.4);
+    border-radius: 8px;
+    width: 100%;
+    height: 45%;
+    background-color: var(--field-bg);
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.spell-box:hover {
+    border-color: rgba(46, 204, 113, 0.8);
+}
+
+.spell-box-card {
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    width: 16%;
+    height: 90%;
+    transition: all 0.3s ease;
+    background-color: rgba(30, 39, 46, 0.6);
+}
+
+.spell-box-card:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(30, 39, 46, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.graveyard-and-deck-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(142, 68, 173, 0.5);
+    border-radius: 8px;
+    width: 60px;
+    height: 90%;
+    background-color: rgba(44, 62, 80, 0.5);
+    padding: 0.5rem 0;
+}
+
+.graveyard-box {
+    border: 1px solid rgba(155, 89, 182, 0.6);
+    border-radius: 8px;
+    width: 50px;
+    height: 110px;
+    background-color: var(--field-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.graveyard-box:hover {
+    border-color: rgba(155, 89, 182, 0.9);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    cursor: pointer;
 }
 
 .graveyard-count {
-	font-size: 1.2rem;
-	font-weight: bold;
-	color: #fff;
-	text-shadow: 0 0 3px #000;
-	background-color: rgba(0, 0, 0, 0.6);
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .deck-box {
-	border: orange 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-top: 5px;
-	position: relative;
+    border: 1px solid rgba(243, 156, 18, 0.6);
+    border-radius: 8px;
+    width: 50px;
+    height: 110px;
+    background-color: var(--field-bg);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.deck-box:hover {
+    border-color: rgba(243, 156, 18, 0.9);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    cursor: pointer;
 }
 
 .field.opponent {
-	transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .field.opponent .monster-box-card,
 .field.opponent .spell-box-card,
 .field.opponent .graveyard-count {
-	transform: rotate(180deg); /* Ré-inverse les éléments internes */
+    transform: rotate(180deg); /* Ré-inverse les éléments internes */
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 1024px) {
+    .field {
+        height: 250px;
+    }
+
+    .monster-box-card,
+    .spell-box-card {
+        width: 18%;
+    }
+}
+
+@media (max-width: 768px) {
+    .field {
+        height: 220px;
+        padding: 0.5rem;
+    }
+
+    .fieldspell-box {
+        width: 50px;
+        height: 90px;
+    }
+
+    .graveyard-box,
+    .deck-box {
+        width: 45px;
+        height: 90px;
+    }
+
+    .graveyard-count {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+    }
 }
