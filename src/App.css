@@ -1,11 +1,83 @@
-.app-container {
+:root {
+	--primary-color: #2c3e50;
+	--secondary-color: #34495e;
+	--accent-color: #3498db;
+	--text-color: #ecf0f1;
+	--border-color: #7f8c8d;
+	--card-bg: #2c3e50;
+	--field-bg: #1e272e;
+}
+
+body {
+	background-color: #121212;
+	color: var(--text-color);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.game-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.game-board {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	margin-bottom: 160px;
+}
+
+.opponent-area,
+.player-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+	color: var(--accent-color);
+	font-size: 2.5rem;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	margin-bottom: 1rem;
+}
+
+.phase-indicator {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin: 1rem 0;
+	padding: 0.5rem;
+	background-color: var(--secondary-color);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-	margin-bottom: 20px;
-	font-size: 2rem;
+.phase-button {
+	background-color: var(--accent-color);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.phase-button:hover {
+	background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+	.game-board {
+		margin-bottom: 200px;
+	}
 }

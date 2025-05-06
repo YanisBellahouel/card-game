@@ -1,99 +1,128 @@
 .field {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	justify-content: center;
-	background-color: #8b8b8b;
-	width: 1000px;
-	height: 300px;
-	border: black 2px solid;
+	align-items: center;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1rem 0;
 }
 
-.fieldspell-box{
-	border: white 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-right: 10px;
+.field-container {
+	background: linear-gradient(to bottom, #2c3e50, #1a2530);
+	border: 3px solid #34495e;
+	border-radius: 12px;
+	box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.7);
+	display: flex;
+	width: 100%;
+	padding: 1rem;
+	gap: 1rem;
 }
 
-.monster-and-spell-box{
+.main-zones {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border: blue 2px solid;
-	width: 520px;
-	height: 220px;
-	margin : 10px;
+	gap: 0.5rem;
+	width: 100%;
 }
 
-.monster-box{
+.monster-zone,
+.spell-zone {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	border: red 2px solid;
-	width: 500px;
-	height: 100px;
-	margin-bottom: 5px;
+	justify-content: space-evenly;
+	width: 100%;
+	gap: 0.5rem;
 }
 
-.monster-box-card{
-	border: rgb(0, 0, 0) 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-right: 20px;
-	margin-left: 20px;
-}
-
-.spell-box{
+.card-zone {
+	width: 120px;
+	height: 170px;
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	justify-content: center;
-	border: green 2px solid;
-	width: 500px;
-	height: 100px;
-	margin-top: 5px;
+	align-items: center;
 }
 
-.spell-box-card{
-	border: rgb(0, 0, 0) 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-right: 20px;
-	margin-left: 20px;
+.zone-placeholder {
+	width: 120px;
+	height: 170px;
+	border: 2px dashed rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 1.5rem;
+	position: relative;
 }
 
-.graveyard-and-deck-box{
+.monster-zone .zone-placeholder:after {
+	content: "M";
+}
+
+.spell-zone .zone-placeholder:after {
+	content: "S";
+}
+
+.field-zone.zone-placeholder:after {
+	content: "F";
+}
+
+.extra-zones {
 	display: flex;
 	flex-direction: column;
+	gap: 1rem;
+}
+
+.field-spell-zone {
+	width: 120px;
+	height: 170px;
+}
+
+.side-zones {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.graveyard-zone,
+.deck-zone {
+	width: 120px;
+	height: 170px;
+}
+
+.graveyard.zone-placeholder:after {
+	content: "G";
+}
+
+.deck.zone-placeholder {
+	background: repeating-linear-gradient(45deg,
+			#2c3e50,
+			#2c3e50 10px,
+			#34495e 10px,
+			#34495e 20px);
+}
+
+.zone-counter {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
 	align-items: center;
-	border: purple 2px solid;
-	width: 60px;
-	height: 220px;
-	margin-right: 10px;
+	font-size: 12px;
 }
 
-.graveyard-box{
-	border: pink 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-bottom: 5px;
-}
-
-.deck-box {
-	border: orange 2px solid;
-	width: 50px;
-	height: 100px;
-	margin-top: 5px;
-}
-
+/* Styles pour le champ de l'adversaire */
 .field.opponent {
-	transform: rotate(180deg);
+	transform: none;
+	/* On ne fait plus de rotation du field entier */
 }
 
-.field.opponent .monster-box-card,
-.field.opponent .spell-box-card {
-	transform: rotate(180deg); /* Ré-inverse les cartes elles-mêmes */
+.field.opponent .zone-placeholder:after {
+	transform: rotate(180deg);
 }

@@ -4,36 +4,143 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.8);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 1000;
+	z-index: 2000;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-backdrop.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-backdrop.closing {
+	opacity: 0;
+}
+
+body.modal-open {
+	overflow: hidden;
 }
 
 .card-modal {
-	background-color: #333;
+	background: linear-gradient(145deg, #2c3e50, #243342);
 	color: #fff;
-	padding: 2rem;
-	border-radius: 10px;
-	max-width: 300px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
-	text-align: center;
+	border-radius: 15px;
+	width: 90%;
+	max-width: 400px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+	transform: scale(0.9);
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
 }
 
-.card-modal img {
+.card-modal.open {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.card-modal-header {
+	background: linear-gradient(to right, #3498db, #2980b9);
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #7df9ff;
+}
+
+.card-modal-header h2 {
+	margin: 0;
+	color: #fff;
+	font-size: 1.5rem;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-type-badge {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 0.3rem 0.6rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.card-modal-image {
 	width: 100%;
-	border-radius: 6px;
-	margin-bottom: 1rem;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background-color: #1a1a2e;
+	border-bottom: 1px solid #495e73;
+	padding: 1rem 0;
 }
 
-.card-modal button {
+.card-modal-image img {
+	max-width: 100%;
+	max-height: 200px;
+	object-fit: contain;
+}
+
+.card-modal-details {
+	padding: 1rem;
+}
+
+.detail-row {
+	margin-bottom: 0.8rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.detail-label {
+	font-weight: bold;
+	color: #7df9ff;
+	font-size: 0.9rem;
+}
+
+.detail-value-effect {
+	font-size: 0.9rem;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 0.5rem;
+	border-radius: 8px;
+}
+
+.card-stats-container {
+	display: flex;
+	justify-content: space-between;
 	margin-top: 1rem;
-	background-color: #7df9ff;
+}
+
+.card-modal-actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.action-button-play {
+	background-color: #3498db;
+	color: #fff;
 	border: none;
+	border-radius: 0px 5px 5px 5px;
 	padding: 0.5rem 1rem;
 	cursor: pointer;
-	color: #000;
-	font-weight: bold;
-	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.action-button-close {
+	background-color: #e74c3c;
+	color: #fff;
+	border: none;
+	border-radius: 5px 0px 5px 5px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
 }
