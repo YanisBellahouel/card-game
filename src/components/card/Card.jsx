@@ -1,4 +1,5 @@
 import "./Card.css";
+import { Cards } from "../../data/Cards";
 
 function Card({ card, onClick }) {
 	return (

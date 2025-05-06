@@ -1,0 +1,20 @@
+.player-infos {
+	background-color: #333;
+	color: #fff;
+	border: 2px solid #666;
+	border-radius: 10px;
+	padding: 1rem;
+	width: 200px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	margin: 1rem;
+}
+
+.player-infos h2 {
+	color: #7df9ff;
+	margin-bottom: 0.5rem;
+}
+
+.player-infos p {
+	margin: 0.3rem 0;
+}
