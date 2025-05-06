@@ -1,0 +1,91 @@
+.field {
+	margin: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: #8b8b8b;
+	width: 800px;
+	height: 300px;
+	border: black 2px solid;
+}
+
+.fieldspell-box{
+	border: white 2px solid;
+	width: 50px;
+	height: 100px;
+	margin-right: 10px;
+}
+
+.monster-and-spell-box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: blue 2px solid;
+	width: 520px;
+	height: 220px;
+	margin : 10px;
+}
+
+.monster-box{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: red 2px solid;
+	width: 500px;
+	height: 100px;
+	margin-bottom: 5px;
+}
+
+.monster-box-card{
+	border: rgb(0, 0, 0) 2px solid;
+	width: 50px;
+	height: 100px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.spell-box{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: green 2px solid;
+	width: 500px;
+	height: 100px;
+	margin-top: 5px;
+}
+
+.spell-box-card{
+	border: rgb(0, 0, 0) 2px solid;
+	width: 50px;
+	height: 100px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.graveyard-and-deck-box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: purple 2px solid;
+	width: 60px;
+	height: 220px;
+	margin-right: 10px;
+}
+
+.graveyard-box{
+	border: pink 2px solid;
+	width: 50px;
+	height: 100px;
+	margin-bottom: 5px;
+}
+
+.deck-box {
+	border: orange 2px solid;
+	width: 50px;
+	height: 100px;
+	margin-top: 5px;
+}
