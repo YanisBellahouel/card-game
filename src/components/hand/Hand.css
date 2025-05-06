@@ -1,0 +1,14 @@
+.hand {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	background-color: #c4c4c4;
+	border: 2px solid #444;
+	position: fixed;
+	bottom: 0;
+	width: 1500px;
+	height: 150px;
+	overflow-x: auto;
+}

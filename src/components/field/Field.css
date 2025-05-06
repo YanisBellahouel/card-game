@@ -89,3 +89,12 @@
 	height: 100px;
 	margin-top: 5px;
 }
+
+.field.opponent {
+	transform: rotate(180deg);
+}
+
+.field.opponent .monster-box-card,
+.field.opponent .spell-box-card {
+	transform: rotate(180deg); /* Ré-inverse les cartes elles-mêmes */
+}

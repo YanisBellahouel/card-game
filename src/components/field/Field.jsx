@@ -1,44 +1,27 @@
-import "./Field.css"
+import "./Field.css";
 
-function Field() {
+function Field({ isOpponent = false }) {
 	return (
-		<div className="field">
-			<div className="fieldspell-box">
-			</div>
+		<div className={`field ${isOpponent ? "opponent" : ""}`}>
+			<div className="fieldspell-box" />
 			<div className="monster-and-spell-box">
 				<div className="monster-box">
-					<div className="monster-box-card">
-					</div>
-					<div className="monster-box-card">
-					</div>
-					<div className="monster-box-card">
-					</div>
-					<div className="monster-box-card">
-					</div>
-					<div className="monster-box-card">
-					</div>
+					{[...Array(5)].map((_, i) => (
+						<div className="monster-box-card" key={`m${i}`} />
+					))}
 				</div>
 				<div className="spell-box">
-					<div className="spell-box-card">
-					</div>
-					<div className="spell-box-card">
-					</div>
-					<div className="spell-box-card">
-					</div>
-					<div className="spell-box-card">
-					</div>
-					<div className="spell-box-card">
-					</div>
+					{[...Array(5)].map((_, i) => (
+						<div className="spell-box-card" key={`s${i}`} />
+					))}
 				</div>
 			</div>
 			<div className="graveyard-and-deck-box">
-				<div className="graveyard-box">
-				</div>
-				<div className="deck-box">
-				</div>
+				<div className="graveyard-box" />
+				<div className="deck-box" />
 			</div>
 		</div>
-	)
+	);
 }
 
 export default Field;
