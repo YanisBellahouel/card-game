@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import MonsterCard from './components/MonsterCard';
-import SpellCard from './components/SpellCard.jsx';
-import monstres from './data/monstres.js';
-import sorts from './data/sorts.js';
+import React, { useState } from 'react';
+import Deck from './components/Deck';
+import Hand from './components/Hand';
 
 function App() {
 	const [mainDuJoueur, setMainDuJoueur] = useState([]);
 
-	useEffect(() => {
-		const toutesLesCartes = [
-			...monstres.map((carte) => ({ ...carte, typeCarte: 'monstre' })),
-			...sorts.map((carte) => ({ ...carte, typeCarte: 'sort' })),
-		];
-
-		const mainAleatoire = toutesLesCartes.sort(() => 0.5 - Math.random()).slice(0, 5);
-		setMainDuJoueur(mainAleatoire);
-	}, []);
+	const handleCardDrawn = (carte) => {
+		// Maximum de 10 cartes en main
+		if (mainDuJoueur.length < 10) {
+			setMainDuJoueur((prev) => [...prev, carte]);
+		}
+	};
 
 	return (
-		<div className="p-4 bg-[#1e1e1e] min-h-screen flex gap-4 flex-wrap">
-			{mainDuJoueur.map((carte) =>
-				carte.typeCarte === 'monstre' ? (
-					<MonsterCard key={carte.id} monstre={carte} />
-				) : (
-					<SpellCard key={carte.id} spell={carte} />
-				)
-			)}
+		<div className="p-6 bg-[#1e1e1e] min-h-screen text-white space-y-6">
+			<h1 className="text-3xl font-bold text-center">Jeu de Cartes</h1>
+
+			{/* Deck avec pioche */}
+			<div className="flex justify-center">
+				<Deck onCardDrawn={handleCardDrawn} />
+			</div>
+
+			{/* Main du joueur */}
+			<div>
+				<h2 className="text-xl mb-2">Main du joueur</h2>
+				<Hand cartes={mainDuJoueur} />
+			</div>
 		</div>
 	);
 }
