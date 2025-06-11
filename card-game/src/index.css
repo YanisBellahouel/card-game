@@ -1,8 +1,8 @@
-body {
-	font-family: 'Arial', sans-serif;
-	background-color: #f0f0f0;
-	color: #333;
-	margin: 0;
-	padding: 20px;
-	height: 1000px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+	@apply bg-gray-100 text-gray-900;
+  }
 }
