@@ -1,0 +1,35 @@
+[
+	{
+		"id": "m1",
+		"nom": "Dragon de Flamme Écarlate",
+		"classe": "S",
+		"image": "https://example.com/images/dragon_flame_ecarlate.png",
+		"type": "Dragon",
+		"archetype": "Flamme Écarlate",
+		"effet": "Inflige 100 de dégats à tous les monstres adverse au moment de l'invocation.",
+		"atk": 700,
+		"pv": 600
+	},
+	{
+		"id": "m2",
+		"nom": "Guerrier Spectral",
+		"classe": "A",
+		"image": "https://example.com/images/guerrier_spectral.png",
+		"type": "Guerrier",
+		"archetype": "Ombre",
+		"effet": "aucun effet spécial.",
+		"atk": 500,
+		"pv": 400
+	},
+	{
+		"id": "m3",
+		"nom": "Sylphide Naissante",
+		"classe": "B",
+		"image": "https://example.com/images/sylphide_naissante.png",
+		"type": "Esprit",
+		"archetype": "Sylphide",
+		"effet": "Rend 100 PV à un allié au moment de l'invocation.",
+		"atk": 300,
+		"pv": 350
+	}
+]
