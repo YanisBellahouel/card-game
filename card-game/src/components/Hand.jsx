@@ -9,7 +9,7 @@ const Hand = ({ cartes, onCardPlayed }) => {
 				<p className="text-gray-400 italic">Aucune carte en main</p>
 			) : (
 				cartes.map((carte, index) => {
-					const key = `${carte.id}-${index}`;
+					const key = carte.uniqueId;
 
 					const handleCardClick = () => {
 						onCardPlayed(index);
